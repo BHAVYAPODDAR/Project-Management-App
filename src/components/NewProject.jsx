@@ -47,7 +47,7 @@ const NewProject = ({ onCancelAddNewProject, onAddNewProject }) => {
           Please make sure you provide a valid value for every input field
         </p>
       </Modal>
-      <div className="w-screen md:w-[35rem] mt-16">
+      <div className="w-screen sm:w-[35rem] mt-16 px-4">
         <menu className="flex items-center justify-end gap-4 my-4">
           <li>
             <button

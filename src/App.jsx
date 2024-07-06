@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HashRouter as Router } from "react-router-dom";
 
-import AddProject from "./components/NewProject";
+import NewProject from "./components/NewProject";
 import Header from "./components/Header";
 import ProjectsSidebar from "./components/ProjectsSidebar";
 import NoProjectsSelected from "./components/NoProjectsSelected";
@@ -120,7 +120,7 @@ function App() {
     content = <NoProjectsSelected onStartAddNewProject={StartAddNewProject} />;
   } else if (projectState.selectedProjectId === null) {
     content = (
-      <AddProject
+      <NewProject
         onCancelAddNewProject={CancelAddNewProject}
         onAddNewProject={AddNewProject}
       />
@@ -130,7 +130,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="h-[92.7vh] flex gap-8">
+      <main className="h-[92.7vh] flex flex-1 gap-8">
         <ProjectsSidebar
           onAddNewProject={StartAddNewProject}
           projects={projectState.projects}
