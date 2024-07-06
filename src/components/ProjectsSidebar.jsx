@@ -9,7 +9,7 @@ const ProjectsSidebar = ({
 }) => {
   return (
     <>
-      <aside className="w-1/3 md:w-72 bg-stone-900 rounded-tr-xl text-stone-50 py-16 px-8 mt-4">
+      <aside className="w-1/3 md:w-72 bg-stone-900 rounded-tr-xl text-stone-50 py-8 px-8 mt-4">
         <div className="mb-8">
           <Button onClick={onAddNewProject}>+ Add Project</Button>
         </div>

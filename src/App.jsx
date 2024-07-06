@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HashRouter as Router } from "react-router-dom";
 
 import NewProject from "./components/NewProject";
-import Header from "./components/Header";
+import Content from "./components/Content";
 import ProjectsSidebar from "./components/ProjectsSidebar";
 import NoProjectsSelected from "./components/NoProjectsSelected";
 import SelectedProject from "./components/SelectedProject";
@@ -129,15 +129,14 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <main className="h-[92.7vh] flex flex-1 gap-8">
+      <main className="h-screen flex flex-1 gap-8">
         <ProjectsSidebar
           onAddNewProject={StartAddNewProject}
           projects={projectState.projects}
           onSelectProject={handleSelectProject}
           selectedProjectId={projectState.selectedProjectId}
         />
-        {content}
+        <Content>{content}</Content>
       </main>
     </Router>
   );
